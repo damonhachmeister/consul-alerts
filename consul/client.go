@@ -675,7 +675,8 @@ func (c *ConsulAlertClient) getProfileForNode(node string) string {
 // GetProfileInfo returns profile info for check
 func (c *ConsulAlertClient) GetProfileInfo(node, serviceID, checkID string) ProfileInfo {
 	log.Println("Getting profile for node: ", node, " service: ", serviceID, " check: ", checkID)
-
+	log.Println("Damon's version")
+	
 	var profile string
 
 	profile = c.getProfileForService(serviceID)
