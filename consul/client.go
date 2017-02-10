@@ -701,7 +701,7 @@ func (c *ConsulAlertClient) GetProfileInfo(node, serviceID, checkID string) Prof
 	if err := json.Unmarshal(kvPair.Value, &checkProfile); err != nil {
 		log.Error("Profile unmarshalling error: ", err.Error())
 	} else {
-		log.Println("Interval: ", checkProfile.Interval, " List: ", checkProfile.NotifList)
+		log.Println("Interval: ", checkProfile.Interval, " List: ", checkProfile.NotifList, " VarOverrides: ", checkProfile.VarOverrides.AwsSns)
 	}
 
 	return checkProfile
